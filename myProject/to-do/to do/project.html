@@ -1,0 +1,111 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
+  <link href="stylesheets/bootstrap-theme.min.css" rel="stylesheet" />
+  <link href="stylesheets/jquery-ui.min.css" rel="stylesheet" />
+  <link href="stylesheets/jquery.datetimepicker.css" rel="stylesheet"/>
+  <link href="stylesheets/style.css" rel="stylesheet" />
+  
+  <script src="javascripts/jquery-2.2.3.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+  <script src="javascripts/jquery-ui.min.js"></script>
+  <script src="javascripts/jquery.datetimepicker.full.min.js"></script>
+  <script src="javascripts/project.js"></script>  
+</head>
+
+<body>
+  <div class="container-fluid" >
+    <div class="row content">
+      <div class="col-sm-3 sidenav">
+        <h4><b><u>To Do List </u></b></h4>
+        <br>
+        <ul class="nav nav-pills nav-stacked" >
+          <li class="navigation-tab active" id=all><a href="#section1">All Tasks <span id="totalCount" class="badge"></span></a></li>
+          <li class="navigation-tab" id="inprogress"><a href="#section2" id=prog>In Progress <span id="inProgressCount" class="badge"></span></a></li>
+          <li class="navigation-tab" id="complete"><a href="#section3" id=comp>Completed Tasks <span id="completedCount" class="badge"></span></a></li>
+          <li class="navigation-tab" id="archiv"><a href="#section3" id=arch>Archived <span id="archivedCount" class="badge"></span></a></li>
+        </ul>
+        <br>
+      </div>
+      <div class="col-sm-9">
+        <div class="panel panel-primary">
+        <div class="panel-heading">
+        <h3 class="panel-title">
+          <span class="glyphicon glyphicon-tasks"></span>
+          <span class="title">All Tasks</span>
+          <div class="btn-group btn-group" id="hi">
+            <button id="deletebut" type="button" class="btn btn-primary" ><span class="glyphicon glyphicon-trash"></span> Trash</button>
+               <div class="dropdown">
+                <button id="sorting" type="button" class="btn btn-primary">sort</button>
+                  <div id="sortingDropdown" class="dropdown-menu">
+                      <a href="#" class="ByName">By Name</a>
+                       <a href="#" class="ByDate">By Date</a>
+  </div>
+  </div>
+  
+
+          </div>
+        </h3>
+      </div>
+      <div class="panel body">
+        <div class="checkbox">
+<table width = 100% id="mytable" class="table table-striped">
+<col width="40px" />
+<col width="30px" />
+<col width="20px" />
+<thead>
+<tr>
+<th id="t1"><b><u><span class="glyphicon glyphicon-tasks"></span>Tasks</u></b></th>
+<th id="t2"><b><u>Date</u></b></th>
+<th></th>
+
+</tr>
+  
+</thead>
+<tbody id = "alltasksbody">
+</tbody>
+</table>
+<br>
+    </div>
+      </div>
+      </div>
+      <button id="opener" class="btn btn-primary">Add Task</button>
+</div>
+ 
+<div id="dialog">
+  <input type="text" placeholder="Title" id="name" class="autoExpand"/>
+  <br>
+  <input type="text" placeholder="Due Date (dd/mm/yyyy)" id="datetimepicker1"/>
+  <br>
+  <input type="text" placeholder="Description" id="describe"/>
+  <br>
+  <input type="button" class="btn btn-primary" value="Add Task" id="new" />
+   <input type="button" class="btn btn-primary" value="Cancel"  id="closer"/>
+</div>
+
+<div id="DeleteDialog">
+  <p><center>Are you sure you want to delete ?</center></p>
+  <br>
+  <input type="button" class="btn btn-primary" value="Delete" id="deleting"/>
+   <input type="button" class="btn btn-primary" value=" Cancel " id="closing"/>
+</div>
+
+ 
+<div id="dialogue">
+  <input type="text" id="Name" class="autoExpand"/>
+  <br>
+  <input type="text" id="datetimepicker2"/>
+  <br>
+  <input type="text" id="Describe"/>
+  <br>
+  <input type="button" class="btn btn-primary" value="Edit task" id="editing" />
+   <input type="button" class="btn btn-primary" value="Cancel"  id="CLOSe"/>
+</div>
+
+
+</body>
+</html>
+
